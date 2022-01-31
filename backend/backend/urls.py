@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from notesapp import views
+
+router = routers.DefaultRouter()
+router.register(r'notes', views.NoteView, 'notes') # Adds /api/notes path, more below.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # Allows creating new Note at localhost:8000/api/notes
+    # Query /notes/ returns a list of all Note items, can CREATE and READ there.
+    # Query /notes/[id] returns a single Note with that id as its primary key,
+    # can UPDATE and DELETE there.
+    path('api/', include(router.urls)),
 ]
