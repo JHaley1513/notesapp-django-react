@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import NotesApp
+from .models import Note
 
 class NotesAppAdmin(admin.ModelAdmin):
-  list = ('title', 'description', 'completed')
+  list = ('title', 'text')
 
-admin.site.register(NotesApp, NotesAppAdmin)
+admin.site.register(Note, NotesAppAdmin)

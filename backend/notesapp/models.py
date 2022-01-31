@@ -1,10 +1,8 @@
 from django.db import models
 
-class NotesApp(models.Model):
+class Note(models.Model):
     title = models.CharField(max_length=120)
-    description = models.TextField() # not initialized yet
-    # completed: status of a task, always is either completed or not.
-    completed = models.BooleanField(default=False)
+    text = models.TextField() # not initialized yet
 
     def _str_(self):
         return self.title

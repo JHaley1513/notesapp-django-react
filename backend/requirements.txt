@@ -1,0 +1,4 @@
+python==3.9.9
+django==4.0
+djangorestframework==3.13.1
+django-cors-headers==3.11.0
