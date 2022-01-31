@@ -4,4 +4,4 @@ from .models import Note
 class NoteSerializer(serializers.ModelSerializer): # For converting Note model to JSON
     class Meta:
         model = Note
-        fields = ('id', 'title', 'text') # adds id field. 
+        fields = ('id', 'title', 'text', 'created', 'modified', 'starred', 'deleted')
