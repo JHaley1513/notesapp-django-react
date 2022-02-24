@@ -45,7 +45,8 @@ class Signup extends Component {
                   value={this.state.username}
                   onChange={this.onChange}
                 />
-                <FormControl.Feedback type="invalid"></FormControl.Feedback>
+                <FormControl.Feedback>Nice name, where'd you get it?</FormControl.Feedback>
+                <FormControl.Feedback type="invalid">Please enter a username.</FormControl.Feedback>
               </Form.Group>
 
               <Form.Group controlId="passwordId">
