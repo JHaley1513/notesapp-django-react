@@ -8,7 +8,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 class App extends Component {
   render() {
     return (
-      <div>Hi!
+      <div>
+        {/* Any text here will be displayed on all pages routed below */}
         <BrowserRouter>
           <Switch>
             <Route path="/signup" component={Signup} />
